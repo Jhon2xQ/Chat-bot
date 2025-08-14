@@ -25,7 +25,9 @@ export default class DocumentService {
     return data.map(
       (d) =>
         new Document({
-          pageContent: `Trámite: ${d.titulo}\nDescripción: ${d.descripcion}\nRequisitos: ${d.requisitos.join(", ")}`,
+          pageContent: `Trámite: ${d.titulo}\nDescripción: ${d.descripcion}\nRequisitos: ${d.requisitos.join(
+            ", "
+          )}\nCosto: ${d.costo}`,
           metadata: { titulo: d.titulo },
         })
     );
